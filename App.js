@@ -1,20 +1,44 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+
+import ImageViewer from './src/ImageViewer/ImageViewer';
+import Button from './src/Button/Button';
+
+const PlaceholderImage = require('./assets/images/softserve.png');
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image source={PlaceholderImage} style={styles.image} />
       <StatusBar style="auto" />
-    </View>
+      <View style={styles.imageContainer}>
+        <ImageViewer placeholderImageSource={PlaceholderImage} />
+      </View>
+      <View style={styles.footerContainer}>
+        <Button label="Click me" />
+
+      </View>
+      <StatusBar style="auto" />
+      </View>  
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  imageContainer: {
+    flex: 0,
+  },
+  footerContainer: {
+    flex: 1 / 3,
+    alignItems: 'center',
+  },
+  image: {
+    width: "100%",
+    borderRadius: 18,
   },
 });
