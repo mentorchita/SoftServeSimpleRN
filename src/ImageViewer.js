@@ -6,6 +6,7 @@ export default function ImageViewer({ placeholderImageSource }) {
   );
 }
 
+
 const styles = StyleSheet.create({
   image: {
     width: 'auto',
