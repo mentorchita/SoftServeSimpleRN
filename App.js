@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-import ImageViewer from './src/ImageViewer/ImageViewer';
-import Button from './src/Button/Button';
+import ImageViewer from './src/ImageViewer';
+import Button from './src/Button';
 
 const PlaceholderImage = require('./assets/images/softserve.png');
 
